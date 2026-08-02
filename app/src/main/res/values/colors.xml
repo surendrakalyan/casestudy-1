@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="background">#0B1220</color>
+    <color name="toolbar">#121826</color>
+    <color name="blue">#2979FF</color>
+    <color name="bubbleUser">#2979FF</color>
+    <color name="bubbleAI">#1E293B</color>
+    <color name="hint">#A0A0A0</color>
+
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+</resources>

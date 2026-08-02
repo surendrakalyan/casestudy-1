@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/background">
+
+    <!-- Top Toolbar -->
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:background="@color/toolbar">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <!-- Menu -->
+
+            <ImageView
+                android:id="@+id/menuIcon"
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="16dp"
+                android:src="@drawable/ic_menu"
+                app:tint="@android:color/white" />
+
+            <!-- AI Avatar -->
+
+            <ImageView
+                android:id="@+id/aiIcon"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="65dp"
+                android:src="@mipmap/ic_launcher_round" />
+
+            <!-- Title -->
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@id/aiIcon"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="12dp"
+                android:text="AI Assistant"
+                android:textColor="@android:color/white"
+                android:textStyle="bold"
+                android:textSize="20sp"/>
+
+            <!-- Status -->
+
+            <TextView
+                android:id="@+id/status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/title"
+                android:layout_alignStart="@id/title"
+                android:text="● Online"
+                android:textColor="#4CAF50"
+                android:textSize="13sp"/>
+
+            <!-- Delete -->
+
+            <ImageView
+                android:id="@+id/deleteIcon"
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="18dp"
+                android:src="@drawable/ic_delete"
+                app:tint="@android:color/white"/>
+
+        </RelativeLayout>
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <!-- Chat Messages -->
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/chatRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:padding="10dp"/>
+
+    <!-- Bottom Message Box -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:padding="10dp"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/editMessage"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/edit_text_bg"
+            android:hint="Type your message..."
+            android:paddingStart="20dp"
+            android:textColor="@android:color/white"
+            android:textColorHint="@color/hint"/>
+
+        <ImageButton
+            android:id="@+id/sendButton"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:layout_marginStart="8dp"
+            android:backgroundTint="@color/blue"
+            android:src="@drawable/ic_send"
+            app:tint="@android:color/white"/>
+
+    </LinearLayout>
+
+</LinearLayout>
